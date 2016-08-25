@@ -6,7 +6,7 @@ Credit to those Blog's for some ideas.
 <br>https://bradsblahblog.com/2016/07/28/space-frame
 <br>http://blog.miguelgrinberg.com/post/watch-live-video-of-earth-on-your-raspberry-pi
 
-For my space frame I used an *Raspberry Pi 2 B* with latest *Raspbian Jessie* installed and the *Official 7" Display (rev2)*.
+For my space frame I used a *Raspberry Pi 2 B* with latest *Raspbian Jessie* installed and the *Official 7" Display (rev2)*.
 
 **1. Preparation**
 
@@ -69,14 +69,14 @@ starts the other NASA ustream which shows sometimes interior footage or the view
 
 > ~/stream/iss.sh ch0 <br>
 
-swaps automatic between the HDEV stream during daytime and the other one during nighttime.
+swaps automaticly between the HDEV stream (daytime) and the other one (nighttime).
 
 
 > ~/stream/iss.sh stop <br>
 
 cancels all runnig actions from previous commands.
 
-Furthermore, each of the three channel commands above starts a ISS position pictrure in the top left corner and a big fullscreen picture diagram of ISS's actual Orbit in the background, so you have something to see if the stream goes down for some reason.
+Furthermore, each of the three channel commands above starts a ISS position picture in the top left corner and a big fullscreen picture diagram of ISS's actual orbit in the background, so you have something to watch if the stream goes down for some reason.
 
 **3. Notation**
 
