@@ -82,6 +82,6 @@ Furthermore, each of the three channel commands above starts a ISS position pict
 
 Due to large data traffic it is not recommended to run the stream with a mobile internet connection.
 
-Control the stream on your Pi from your smartphone.
-https://play.google.com/store/apps/details?id=uk.co.knowles_online.raspberrysshlite
+Control the stream on your Pi from your smartphone.<br>
+https://play.google.com/store/apps/details?id=uk.co.knowles_online.raspberrysshlite<br>
 or with something similar for iPhone.
