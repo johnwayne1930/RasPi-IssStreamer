@@ -5,7 +5,7 @@ case "$1" in
 ch0)
 while true
 do
-visibility=$(python -c 'import iss-vis; print')
+visibility=$(python -c 'import iss; print')
  if [ "$visibility" = daylight ]; then
   livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
  else
