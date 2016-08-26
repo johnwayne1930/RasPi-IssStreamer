@@ -55,7 +55,7 @@ Python.
 
 That should be all for now.
 
-**2. start the Stream**
+**2. Usage**
 
 The `<iss.sh>` starts the stream on the Raspberry Pi display.
 Therefore open the Terminal or SSH into your Pi and use one of following commands:
