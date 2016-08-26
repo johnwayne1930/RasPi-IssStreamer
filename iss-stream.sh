@@ -1,27 +1,23 @@
 #!/bin/bash
 
+while true; do
 case "$1" in
 ch0)
-while true; do
 visibility=$(python -c 'import iss');
-if [ $visibility = daylight ]; then
- livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
-elif [ $visibility = eclipsed ]; then
- livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
-fi
-done &
+ if [ $visibility = daylight ]; then
+  livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+ else
+  livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+ fi
 ;;
 ch1)
-while true; do
 livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
-done &
 ;;
 ch2)
-while true; do
 livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
-done &
 ;;
 esac
+done &
 
 while sleep 60; do 
 wget -O /tmp/issorbit.png "http://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"
