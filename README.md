@@ -25,6 +25,9 @@ Make sure you are in the users home directory by run
 and run this command to download the necessary scripts.
 > git clone https://github.com/johnwayne1930/RasPi-iss-streamer.git stream
 
+Make them executable.
+> sudo chmod +x iss.sh && sudo chmod +x iss.py && sudo chmod +x iss-stream.sh
+
 Livestreamer for the livestream.
 > sudo apt-get install python-pip <br>
 > pip install livestreamer
