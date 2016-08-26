@@ -4,7 +4,9 @@
 while true; do
 case "$1" in
 ch0)
-visibility=$(python -c 'import iss');
+~/stream/iss.py > /tmp/iss.log
+sleep 3
+visibility=$(</tmp/iss.log)
  if [ $visibility != eclipsed ]; then
   livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
  else
