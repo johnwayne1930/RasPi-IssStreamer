@@ -6,7 +6,8 @@ Credit to those Blog's for some ideas.
 <br>https://bradsblahblog.com/2016/07/28/space-frame
 <br>http://blog.miguelgrinberg.com/post/watch-live-video-of-earth-on-your-raspberry-pi
 
-For my space frame I used a *Raspberry Pi 2 B* with latest *Raspbian Jessie* installed and the *Official 7" Display*.
+For my space frame I used a *Raspberry Pi 2 B* with latest *Raspbian Jessie* installed and the *Official 7" Display*.<br>
+See pictrue http://i.imgur.com/IzFGym5.jpg
 
 **1. Preparation**
 
