@@ -8,24 +8,24 @@ ch0)
 sleep 3
 visibility=$(</tmp/iss.log)
  if [ $visibility != eclipsed ]; then
-  livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+  /usr/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
  else
-  livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+  /usr/bin/livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
  fi
 ;;
 ch1)
-livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+/usr/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 ;;
 ch2)
-livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+/usr/bin/livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 ;;
 esac
 done &
 
 # orbit picture for the background
 while sleep 60; do 
-wget -O /tmp/issorbit.png "http://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"
-DISPLAY=:0.0 XAUTHORITY=/home/pi/.Xauthority /usr/bin/feh -F -Z /tmp/issorbit.png
+((wget -O /tmp/issorbit.png "http://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"
+DISPLAY=:0.0 /usr/bin/feh -F -Z /tmp/issorbit.png) &)
 done &
 
 # orbit overlay in top left corner; have to simplify this..
