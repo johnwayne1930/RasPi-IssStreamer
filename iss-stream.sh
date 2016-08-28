@@ -1,14 +1,16 @@
 #!/bin/bash
 
-~/stream/iss.py > /tmp/iss.log && vischeck=$(</tmp/iss.log)
+~/stream/iss.py > /tmp/iss.log && vischeck=$(</tmp/iss.log) && visibility=$(</tmp/iss.log)
 
 # keeps the livestream up and running
 while true; do
 case "$1" in
 ch0)
-~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
-if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo "stream killed due to change from $vischeck to $visibility"; fi
-vischeck=$visibility
+ while sleep 60; do
+ ~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
+ if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility"; else -e "\e[31mstream is running, everything is fine, don't panic!"; fi
+ vischeck=$visibility
+ done &
 if [ $visibility != eclipsed ]; then
  /usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 else
@@ -71,4 +73,4 @@ omxplayer -o hdmi /tmp/ISS-Display-video2.mp4 --layer 1200 --win "0 0 100 100" &
 sleep 9;
 omxplayer -o hdmi /tmp/ISS-Display-video2.mp4 --layer 1200 --win "0 0 100 100") &
 sleep 60
-done
+done &
