@@ -6,15 +6,13 @@
 while true; do
 case "$1" in
 ch0)
- while sleep 60; do
- ~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
- if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility\e[0m"; else echo -e "\e[31mstream is running, everything is fine, don't panic!\e[0m"; fi
- vischeck=$visibility
- done &
+~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
+if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility\e[0m"; else echo -e "\e[31meverything is fine, don't panic!\e[0m"; fi
+vischeck=$visibility
 if [ $visibility != eclipsed ]; then
- /usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 else
- /usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 fi
 ;;
 ch1)
