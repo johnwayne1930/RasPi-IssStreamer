@@ -8,7 +8,7 @@ case "$1" in
 ch0)
  while sleep 60; do
  ~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
- if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility"; else -e "\e[31mstream is running, everything is fine, don't panic!"; fi
+ if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility"; else echo -e "\e[31mstream is running, everything is fine, don't panic!"; fi
  vischeck=$visibility
  done &
 if [ $visibility != eclipsed ]; then
