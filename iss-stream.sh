@@ -1,14 +1,14 @@
 #!/bin/bash
 
+~/stream/iss.py > /tmp/iss.log && vischeck=$(</tmp/iss.log)
+
 # keeps the livestream up and running
 while true; do
 case "$1" in
 ch0)
-~/stream/iss.py > /tmp/iss.log
-sleep 3
-visibility=$(</tmp/iss.log)
-if [ "$visibility" != "$visold" ]; then pkill -f livestreamer; fi
-visold=$visibility
+~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
+if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo "stream killed due to change from $vischeck to $visibility"; fi
+vischeck=$visibility
 if [ $visibility != eclipsed ]; then
  /usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 else
