@@ -1,6 +1,6 @@
 #!/bin/bash
 
-~/stream/iss.py > /tmp/iss.log && vischeck=$(</tmp/iss.log) && visibility=$(</tmp/iss.log)
+~/stream/iss.py > /tmp/iss.log && vischeck=$(</tmp/iss.log)
 
 case "$1" in
 ch0)
@@ -16,6 +16,7 @@ esac
 while true; do
 case "$1" in
 ch0)
+~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
 if [ $visibility != eclipsed ]; then
 /usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --live {filename}"
 else
