@@ -8,7 +8,7 @@ case "$1" in
 ch0)
  while sleep 60; do
  ~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
- if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility"; else echo -e "\e[31mstream is running, everything is fine, don't panic!"; fi
+ if [ "$visibility" != "$vischeck" ]; then pkill -f livestreamer && echo -e "\e[31mstream killed due to change from $vischeck to $visibility\e[0m"; else echo -e "\e[31mstream is running, everything is fine, don't panic!\e[0m"; fi
  vischeck=$visibility
  done &
 if [ $visibility != eclipsed ]; then
@@ -73,4 +73,4 @@ omxplayer -o hdmi /tmp/ISS-Display-video2.mp4 --layer 1200 --win "0 0 100 100" &
 sleep 9;
 omxplayer -o hdmi /tmp/ISS-Display-video2.mp4 --layer 1200 --win "0 0 100 100") &
 sleep 60
-done &
+done
