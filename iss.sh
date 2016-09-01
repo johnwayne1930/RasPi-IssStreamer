@@ -27,7 +27,7 @@ screen -X -S stream quit
 exit
 ;; 
 *) # in case the input is wrong
-echo "Usage: $(basename $0) {ch0|ch1|ch2|stop}"
+echo -e "The cosmic object you are looking for has disappeared beyond the event horizon\nUsage: $(basename $0) {ch0|ch1|ch2|ch3|stop}"
 exit 1
 ;;
 esac  
