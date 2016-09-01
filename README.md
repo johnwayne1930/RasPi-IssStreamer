@@ -63,19 +63,19 @@ Therefore open the Terminal or SSH into your Pi and use one of following command
 
 > ~/stream/iss.sh ch0 <br>
 
-swaps automaticly between the HDEV stream (daytime) and the other ISS Stream (nighttime).
+swaps automaticly between the HDEV stream during daytime and the other ISS Live Stream at nighttime.
 
 > ~/stream/iss.sh ch1 <br>
 
-starts HDEV ustream which swaps between three different cameras from time to time.
+starts High Definition Earth Viewing (HDEV) experiment ustream which swaps between three different cameras from time to time.
 
 > ~/stream/iss.sh ch2 <br>
 
-starts the other NASA ustream which shows sometimes interior footage or the view from Canadarm2's camera.
+starts the other Live ISS Stream ustream which shows sometimes interior footage or the view from Canadarm2 camera.
 
 > ~/stream/iss.sh ch3 <br>
 
-starts the NASA TV ustream.
+starts the NASA Public-Education ustream.
 
 > ~/stream/iss.sh stop <br>
 
