@@ -68,6 +68,7 @@ Swaps automaticly between the HDEV stream during daytime and the other ISS Live 
 > ~/stream/iss.sh ch1 <br>
 
 Starts High Definition Earth Viewing (HDEV) experiment ustream which swaps between three different cameras from time to time.<br>
+
 About:<br>
 *Black Image = International Space Station (ISS) is on the night side of the Earth.
 No Audio = Normal. There is no audio by design.*
@@ -75,6 +76,7 @@ No Audio = Normal. There is no audio by design.*
 > ~/stream/iss.sh ch2 <br>
 
 Starts the other Live ISS ustream.<br>
+
 About:<br>
 *Live video from the International Space Station includes internal views when the crew is on-duty and Earth views at other times.
 The video is accompanied by audio of conversations between the crew and Mission Control.
@@ -83,6 +85,7 @@ This video is only available when the space station is in contact with the groun
 > ~/stream/iss.sh ch3 <br>
 
 Starts the NASA Public-Education ustream.<br>
+
 About:<br>
 *NASA TV airs a variety of regularly scheduled, pre-recorded educational and public relations programming 24 hours a day on its various channels.
 The network also provides an array of live programming, such as 24-hour coverage of ~~Space Shuttle~~ missions, ISS events (spacewalks, media interviews, educational broadcasts), press conferences and rocket launches.*
