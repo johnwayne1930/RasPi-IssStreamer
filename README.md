@@ -1,5 +1,3 @@
-# RasPi-iss-streamer
-
 Stream stunning footage from NASA's High Definition Earth Viewing (HDEV) Cameras to your Raspberry Pi.
 
 Credit to those Blog's for some ideas.
@@ -9,7 +7,7 @@ Credit to those Blog's for some ideas.
 For my space frame I used a *Raspberry Pi 2 B* with latest *Raspbian Jessie* installed and the *Official 7" Display*.<br>
 See pictrue http://imgur.com/IzFGym5
 
-**1. Preparation**
+# 1. Preparation
 
 First things first. We have to install all dependencies to make this work proper.
 
@@ -56,7 +54,7 @@ Python.
 
 That should be all for now.
 
-**2. Usage**
+# 2. Usage
 
 The `<iss.sh>` starts the stream on the Raspberry Pi display.
 Therefore open the Terminal or SSH into your Pi and use one of following commands:
@@ -96,7 +94,7 @@ Cancels all runnig actions from previous commands.
 
 Furthermore, each of the three channel commands above starts a ISS position picture in the top left corner and a big fullscreen picture schematic of ISS's actual orbit in the background, so you have something to watch if the stream goes down for some reason.
 
-**3. Notation**
+# 3. Notation
 
 Due to large data traffic it is not recommended to run the stream with a mobile internet connection.
 
