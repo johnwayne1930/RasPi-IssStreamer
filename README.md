@@ -70,8 +70,8 @@ Swaps automaticly between the HDEV stream during daytime and the other ISS Live 
 Starts High Definition Earth Viewing (HDEV) experiment ustream which swaps between three different cameras from time to time.<br>
 
 About:<br>
-*Black Image = International Space Station (ISS) is on the night side of the Earth.
-No Audio = Normal. There is no audio by design.*
+*Black Image means the International Space Station (ISS) is on the night side of the Earth.
+There is no audio by design.*
 
 > ~/stream/iss.sh ch2 <br>
 
