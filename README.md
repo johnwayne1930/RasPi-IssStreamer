@@ -71,7 +71,7 @@ starts High Definition Earth Viewing (HDEV) experiment ustream which swaps betwe
 
 > ~/stream/iss.sh ch2 <br>
 
-starts the other Live ISS Stream ustream which shows sometimes interior footage or the view from Canadarm2 camera.
+starts the other Live ISS ustream which shows sometimes interior footage or the view from Canadarm2 camera.
 
 > ~/stream/iss.sh ch3 <br>
 
