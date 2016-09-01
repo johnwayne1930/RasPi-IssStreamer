@@ -61,20 +61,21 @@ That should be all for now.
 The `<iss.sh>` starts the stream on the Raspberry Pi display.
 Therefore open the Terminal or SSH into your Pi and use one of following commands:
 
+> ~/stream/iss.sh ch0 <br>
+
+swaps automaticly between the HDEV stream (daytime) and the other ISS Stream (nighttime).
+
 > ~/stream/iss.sh ch1 <br>
 
 starts HDEV ustream which swaps between three different cameras from time to time.
-
 
 > ~/stream/iss.sh ch2 <br>
 
 starts the other NASA ustream which shows sometimes interior footage or the view from Canadarm2's camera.
 
+> ~/stream/iss.sh ch3 <br>
 
-> ~/stream/iss.sh ch0 <br>
-
-swaps automaticly between the HDEV stream (daytime) and the other one (nighttime).
-
+starts the NASA TV ustream.
 
 > ~/stream/iss.sh stop <br>
 
