@@ -22,7 +22,7 @@ Make sure you are in the users home directory by run
 > cd
 
 and run this command to download the necessary scripts.
-> git clone https://github.com/johnwayne1930/RasPi-iss-streamer.git stream
+> git clone https://github.com/johnwayne1930/RasPi-IssStreamer.git stream
 
 Make them executable.
 > sudo chmod +x iss.sh && sudo chmod +x iss.py && sudo chmod +x iss-stream.sh
