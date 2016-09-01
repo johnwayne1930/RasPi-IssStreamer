@@ -63,25 +63,35 @@ Therefore open the Terminal or SSH into your Pi and use one of following command
 
 > ~/stream/iss.sh ch0 <br>
 
-swaps automaticly between the HDEV stream during daytime and the other ISS Live Stream at nighttime.
+Swaps automaticly between the HDEV stream during daytime and the other ISS Live Stream at nighttime.
 
 > ~/stream/iss.sh ch1 <br>
 
-starts High Definition Earth Viewing (HDEV) experiment ustream which swaps between three different cameras from time to time.
+Starts High Definition Earth Viewing (HDEV) experiment ustream which swaps between three different cameras from time to time.<br>
+Description:<br>
+Black Image = International Space Station (ISS) is on the night side of the Earth.<br>
+No Audio = Normal. There is no audio by design. 
 
 > ~/stream/iss.sh ch2 <br>
 
-starts the other Live ISS ustream which shows sometimes interior footage or the view from Canadarm2 camera.
+Starts the other Live ISS ustream.
+Description:<br>
+Live video from the International Space Station includes internal views when the crew is on-duty and Earth views at other times.<br>
+The video is accompanied by audio of conversations between the crew and Mission Control.
+<br>This video is only available when the space station is in contact with the ground. During "loss of signal" periods, viewers will see a blue screen.
 
 > ~/stream/iss.sh ch3 <br>
 
-starts the NASA Public-Education ustream.
+Starts the NASA Public-Education ustream.
+Description:<br>
+NASA TV airs a variety of regularly scheduled, pre-recorded educational and public relations programming 24 hours a day on its various channels.<br>
+The network also provides an array of live programming, such as 24-hour coverage of ~~Space Shuttle~~ missions, ISS events (spacewalks, media interviews, educational broadcasts), press conferences and rocket launches.
 
 > ~/stream/iss.sh stop <br>
 
-cancels all runnig actions from previous commands.
+Cancels all runnig actions from previous commands.
 
-Furthermore, each of the three channel commands above starts a ISS position picture in the top left corner and a big fullscreen picture diagram of ISS's actual orbit in the background, so you have something to watch if the stream goes down for some reason.
+Furthermore, each of the three channel commands above starts a ISS position picture in the top left corner and a big fullscreen picture schematic of ISS's actual orbit in the background, so you have something to watch if the stream goes down for some reason.
 
 **3. Notation**
 
