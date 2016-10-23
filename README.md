@@ -33,6 +33,7 @@ Livestreamer for the livestream.
 
 Some stuff to get good stream quality.
 > sudo apt-get install librtmp-dev <br>
+> sudo apt-get install libffi-dev <br>
 > pip install cffi <br>
 > pip install python-librtmp
 
