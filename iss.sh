@@ -29,10 +29,23 @@ echo -e "Set channel 3\nNASA TV"
 screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch3; exec bash'
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
 ;;
-stop) # stops all actions without starting new ones
-echo "Stream Ended"
+all) # All ustream channels in Surveillance mode
 screen -X -S stream quit
 screen -X -S overlay quit
+echo -e "Set channels to Surveillance mode"
+screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
+screen -d -m -S stream1 sh -c '~/stream/iss-stream-s.sh ch1; exec bash'
+screen -d -m -S stream2 sh -c '~/stream/iss-stream-s.sh ch2; exec bash'
+screen -d -m -S stream3 sh -c '~/stream/iss-stream-s.sh ch3; exec bash'
+;;
+stop) # stops all actions without starting new ones
+echo "Stream Ended"
+killd () {
+for session in $(screen -ls | grep -o '[0-9]\+')
+do
+screen -S "${session}" -X quit;
+done
+}
 exit
 ;; 
 *) # in case the input is wrong
