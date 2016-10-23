@@ -28,14 +28,15 @@ Make them executable.
 > sudo chmod +x iss.sh && sudo chmod +x iss.py && sudo chmod +x iss-stream.sh
 
 Livestreamer for the livestream.
+> sudo apt-get install python-dev <br>
 > sudo apt-get install python-pip <br>
-> pip install livestreamer
+> sudo pip install livestreamer
 
 Some stuff to get good stream quality.
 > sudo apt-get install librtmp-dev <br>
 > sudo apt-get install libffi-dev <br>
-> pip install cffi <br>
-> pip install python-librtmp
+> sudo pip install cffi <br>
+> sudo pip install python-librtmp
 
 Omxplayer, because livestreamer is not a player itself.
 > sudo apt-get install omxplayer
@@ -51,7 +52,7 @@ Screen for emulating terminal sessions.
 
 Python.
 > sudo apt-get install python3 <br>
-> pip install urllib urllib2
+> sudo pip install urllib urllib2
 
 That should be all for now.
 
