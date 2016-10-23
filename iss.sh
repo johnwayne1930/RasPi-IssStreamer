@@ -11,26 +11,26 @@ case "$1" in
 ch0) # HDEV ustream channel and Live ISS Stream ustream channel swap according to day/night time of iss orbit
 killstream &
 echo -e "Set channel 0\nswitching channels automatically"
-screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch0; exec bash'
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
+screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch0; exec bash'
 ;;
 ch1) # High Definition Earth Viewing (HDEV) experiment ustream channel
 killstream &
 echo -e "Set channel 1\nHDEV"
-screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch1; exec bash'
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
+screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch1; exec bash'
 ;;
 ch2) # Live ISS Stream ustream channel
 killstream &
 echo -e "Set channel 2\nISS Stream"
-screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch2; exec bash'
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
+screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch2; exec bash'
 ;;
 ch3) # NASA Public-Education ustream channel
 killstream &
 echo -e "Set channel 3\nNASA TV"
-screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch3; exec bash'
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
+screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch3; exec bash'
 ;;
 all) # All ustream channels in Surveillance mode
 killstream &
