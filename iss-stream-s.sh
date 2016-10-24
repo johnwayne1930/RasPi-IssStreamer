@@ -13,7 +13,7 @@ ch2)
 ;;
 ch3)
 # mobile_240p / mobile_360p / mobile_480p / mobile_720p
-/usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv mobile_240p --player omxplayer --fifo --player-args "--win '400 0 80 240' --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv mobile_240p --player omxplayer --fifo --player-args "--win '400 0 800 240' --live {filename}"
 ;;
 esac
 done
