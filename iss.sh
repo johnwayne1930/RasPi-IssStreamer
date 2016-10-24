@@ -3,7 +3,7 @@
 killstream () {
 for session in $(screen -ls | grep -o '[0-9]\{5\}') # or maybe?: for session in $(screen -ls | grep -o '[0-9]\+')
 do
-echo screen -S "${session}" -X quit;
+screen -S "${session}" -X quit;
 done
 }
 
