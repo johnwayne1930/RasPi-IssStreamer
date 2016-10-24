@@ -46,7 +46,7 @@ killstream
 exit
 ;; 
 *) # in case the input is wrong
-echo -e "The cosmic object you are looking for has disappeared beyond the event horizon\nUsage: $(basename $0) {ch0|ch1|ch2|ch3|stop}"
+echo -e "The cosmic object you are looking for has disappeared beyond the event horizon\nUsage: $(basename $0) {ch0|ch1|ch2|ch3|all|stop}"
 exit 1
 ;;
 esac  
