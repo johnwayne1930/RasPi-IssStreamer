@@ -18,19 +18,19 @@ case "$1" in
 ch0)
 ~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
 if [ $visibility != eclipsed ]; then
-/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --stream-segment-threads --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
 else
-/usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --stream-segment-threads --fifo  --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream best --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
 fi
 ;;
 ch1)
-/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_720p --player omxplayer --stream-segment-threads --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
 ;;
 ch2)
-/usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream mobile_480p --player omxplayer --stream-segment-threads --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
 ;;
 ch3)
-/usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv mobile_720p --player omxplayer --stream-segment-threads --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --video_fifo 200 --live {filename}"
 ;;
 esac
 done
