@@ -18,13 +18,13 @@ case "$1" in
 ch0)
 ~/stream/iss.py > /tmp/iss.log && visibility=$(</tmp/iss.log)
 if [ $visibility != eclipsed ]; then
-/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --threshold .01 --video_fifo .01 --fps 25 --timeout 20 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_480p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --threshold .01 --video_fifo .01 --fps 25 --timeout 20 --live {filename}"
 else
 /usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream best --player omxplayer --fifo  --player-args "--layer 1000 --win '0 0 800 480' --timeout 20 --live {filename}"
 fi
 ;;
 ch1)
-/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --timeout 20 --live {filename}"
+/usr/local/bin/livestreamer http://ustream.tv/channel/iss-hdev-payload mobile_480p --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --timeout 20 --live {filename}"
 ;;
 ch2)
 /usr/local/bin/livestreamer http://ustream.tv/channel/live-iss-stream best --player omxplayer --fifo --player-args "--layer 1000 --win '0 0 800 480' --timeout 20 --live {filename}"
