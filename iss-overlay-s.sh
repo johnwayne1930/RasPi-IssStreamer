@@ -1,8 +1,3 @@
-# orbit picture for the background
-wget -O /tmp/issorbit.png "http://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"
-DISPLAY=:0.0 XAUTHORITY=~/.Xauthority /usr/bin/feh -F -Z -R 30 /tmp/issorbit.png &
-while sleep 120; do wget -O /tmp/issorbit.png "http://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"; done &
-
 # orbit overlay in top left corner; have to simplify this..
 wget -O /tmp/issorbit.png "http://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544"
 avconv -loop 1 -i /tmp/ISS-Display-image1.png -tune stillimage -t 10 -y -r 5 /tmp/ISS-Display-video1.mp4
