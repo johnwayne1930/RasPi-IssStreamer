@@ -35,7 +35,7 @@ screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch3; exec bash'
 all) # All ustream channels in Surveillance mode
 killstream
 echo -e "Set channels to surveillance mode"
-screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
+screen -d -m -S overlay sh -c '~/stream/iss-overlay-s.sh; exec bash'
 screen -d -m -S stream1 sh -c '~/stream/iss-stream-s.sh ch1; exec bash'
 screen -d -m -S stream2 sh -c '~/stream/iss-stream-s.sh ch2; exec bash'
 screen -d -m -S stream3 sh -c '~/stream/iss-stream-s.sh ch3; exec bash'
