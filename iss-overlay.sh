@@ -45,8 +45,7 @@ omxplayer -o hdmi /tmp/ISS-Display-video2.mp4 --layer 3 --win "0 0 80 80" &
 sleep 9;
 omxplayer -o hdmi /tmp/ISS-Display-video2.mp4 --layer 3 --win "0 0 80 80") &
 sleep 60
-done
-
+done &
 
 # orbit overlay in top left corner; have to simplify this..
 wget -O /tmp/SUN-Display-image1.png "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_0171.jpg"
