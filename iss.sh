@@ -34,6 +34,11 @@ killstream
 echo -e "Set channel 3\nNASA TV"
 screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch3; exec bash'
 ;;
+ch4) # Last 48 hours video of the Sun by Solar Dynamics Observatory
+killstream
+echo -e "Set channel 4\nSDO last 48 hours"
+screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch4; exec bash'
+;;
 all) # All ustream channels in Surveillance mode
 killstream
 echo -e "Set channels to surveillance mode"
