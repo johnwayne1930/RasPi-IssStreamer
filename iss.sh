@@ -12,21 +12,18 @@ ch0) # HDEV ustream channel and Live ISS Stream ustream channel swap according t
 killstream
 echo -e "Set channel 0\nswitching channels automatically"
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
-screen -d -m -S overlay2 sh -c '~/stream/sun-overlay.sh; exec bash'
 screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch0; exec bash'
 ;;
 ch1) # High Definition Earth Viewing (HDEV) experiment ustream channel
 killstream
 echo -e "Set channel 1\nHDEV"
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
-screen -d -m -S overlay2 sh -c '~/stream/sun-overlay.sh; exec bash'
 screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch1; exec bash'
 ;;
 ch2) # Live ISS Stream ustream channel
 killstream
 echo -e "Set channel 2\nISS Stream"
 screen -d -m -S overlay sh -c '~/stream/iss-overlay.sh; exec bash'
-screen -d -m -S overlay2 sh -c '~/stream/sun-overlay.sh; exec bash'
 screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch2; exec bash'
 ;;
 ch3) # NASA Public-Education ustream channel
