@@ -54,21 +54,21 @@ avconv -loop 1 -i /tmp/SUN-Display-image1.png -tune stillimage -t 10 -y -r 5 /tm
 while true; do
 (wget -O /tmp/SUN-Display-image2.png "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_0171.jpg";
 avconv -loop 1 -i /tmp/SUN-Display-image2.png -tune stillimage -t 10 -y -r 5 /tmp/SUN-Display-video2.mp4) &
-(omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+(omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" &
 sleep 9;
-omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 2 --win "0 400 80 480" ) &
+omxplayer -o hdmi /tmp/SUN-Display-video1.mp4 --layer 4 --win "0 0 80 80" ) &
 sleep 60
  
 (wget -O /tmp/SUN-Display-image1.png "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_0171.jpg";
