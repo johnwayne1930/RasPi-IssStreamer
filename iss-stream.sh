@@ -32,5 +32,8 @@ ch2)
 ch3)
 /usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv best --player omxplayer --fifo --player-args "--layer 1 --win '0 0 800 480' --timeout 25 --live {filename}"
 ;;
+ch4)
+omxplayer --loop --layer 1 --win '0 0 800 480' https://sdo.gsfc.nasa.gov/data/latest48.php?q=0171
+;;
 esac
 done
