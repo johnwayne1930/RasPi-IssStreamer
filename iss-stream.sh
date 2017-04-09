@@ -37,8 +37,7 @@ done
 
 case "$1" in
 ch4)
-rm -r /tmp/latest_1024_0171.mp4
-wget -N /tmp/latest_1024_0171.mp4 "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0171.mp4"
+wget /tmp/latest_1024_0171.mp4 "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0171.mp4"
 omxplayer --loop --no-osd --blank --layer 1 --win '160 0 640 480' /tmp/latest_1024_0171.mp4
 ;;
 esac
