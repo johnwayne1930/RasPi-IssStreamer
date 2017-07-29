@@ -13,9 +13,8 @@ ch2)
 ;;
 ch3)
 # mobile_240p / mobile_360p / mobile_480p / mobile_720p
-# /usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv worst --player omxplayer --fifo --player-args "--blank --win '400 0 800 240' --timeout 25 --live {filename}"
-# /usr/local/bin/livestreamer http://192.1.168.23:8081 worst --player omxplayer --fifo --player-args "--blank --win '400 0 800 240' --timeout 25 --live {filename}"
-omxplayer --win "400 0 800 240" http://192.1.168.23:8081
+/usr/local/bin/livestreamer http://ustream.tv/channel/nasa-hd-tv worst --player omxplayer --fifo --player-args "--blank --win '400 0 800 240' --timeout 25 --live {filename}"
+# omxplayer --win "400 0 800 240" http://192.1.168.23:8081
 ;;
 esac
 done
