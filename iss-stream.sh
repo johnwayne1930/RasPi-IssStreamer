@@ -33,8 +33,9 @@ ch3)
 /usr/local/bin/livestreamer http://www.ustream.tv/channel/nasa-hd-tv best --player omxplayer --fifo --player-args "--layer 1 --win '0 0 800 480' --timeout 25 --live {filename}"
 ;;
 ch4)
-wget -O /tmp/latest_1024_0171.mp4 "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_1024_0171.mp4"
-omxplayer --loop --no-osd --blank --layer 1 --win '160 0 640 480' /tmp/latest_1024_0171.mp4
+# 512, 1024 or 1080
+wget -O /tmp/latest_512_0171.mp4 "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_512_0171.mp4"
+omxplayer --loop --no-osd --blank --layer 1 --win '160 0 640 480' /tmp/latest_512_0171.mp4
 ;;
 esac
 done
