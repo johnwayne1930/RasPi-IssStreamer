@@ -37,6 +37,9 @@ ch4)
 wget -O /tmp/latest_512_0171.mp4 "https://sdo.gsfc.nasa.gov/assets/img/latest/mpeg/latest_512_0171.mp4"
 omxplayer --loop --no-osd --blank --layer 1 --win '160 0 640 480' /tmp/latest_512_0171.mp4
 ;;
+ch5)
+/usr/local/bin/streamlink --player vlc --fifo youtu.be/EEIk7gwjgIM best
+;;
 esac
 done
 
