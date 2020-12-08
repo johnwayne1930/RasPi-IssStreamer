@@ -36,6 +36,11 @@ killstream
 echo -e "Set channel 4\nSDO last 48 hours"
 screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch4; exec bash'
 ;;
+ch5) # Test Stream via streamlink
+killstream
+echo -e "Set channel 5\nTest"
+screen -d -m -S stream sh -c '~/stream/iss-stream.sh ch5; exec bash'
+;;
 all) # All ustream channels in Surveillance mode
 killstream
 echo -e "Set channels to surveillance mode"
